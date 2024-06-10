@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_傑佛瑞·達默.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">傑佛瑞·達默（Jeffrey Dahmer）</h5>
+                        <p class="custom-text">出生地：美國威斯康辛州</p>
+                        <p class="custom-text">出生日期：1960年5月21日</p>
+                        <p class="custom-text">身高：6英尺1英寸（約185厘米）</p>
+                        
+                        <p class="custom-text">犯罪活動期間：1978年至1991年</p>
+                        <p class="custom-text">被捕日期：1991年7月22日</p>
+                        <p class="custom-text">判決：15次終身監禁</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            傑佛瑞·達默於1960年5月21日出生於美國威斯康星州密爾沃基。他的父母是萊昂內爾·達默和喬伊絲·達默。達默的童年早期看似正常，但在他八歲時，家人搬到了俄亥俄州，這次搬遷被認為是他開始變得孤僻的開端。他的父母婚姻不和，經常爭吵，最終在他18歲時離婚，這對達默造成了心理上的創傷。
+                        </p>
+
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            傑佛瑞·達默的犯罪行為始於1978年，當時他18歲，第一個受害者是一名年輕男子。此後，達默的犯罪行為持續了多年，直到1991年被捕。他的犯罪行為主要集中在威斯康星州和俄亥俄州，他通常在酒吧、購物中心等公共場所選擇目標，然後將受害者帶回家中。
+                        </p>
+                        <p class="custom-text">
+                            達默的犯罪行為涉及謀殺和肢解受害者的屍體，他通常會在犯罪過後保留受害者的部分遺體。這些案件不僅震驚了社會，也引發了對他心理狀況的廣泛討論。
+
+
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            1991年7月22日，傑佛瑞·達默的最後一名受害者成功逃脫並報警，警方隨後在達默的公寓中發現了大量證據，包括受害者的遺體部分和犯罪工具。達默被捕後對所有指控供認不諱，並詳細描述了自己的犯罪過程。
+                        </p>
+                        <p class="custom-text">
+                            1992年，達默被判處15個無期徒刑，後來又追加了一個無期徒刑，共16個無期徒刑。在監獄中，達默表現得較為合作，但仍遭到其他囚犯的敵視。1994年11月28日，達默在威斯康星州哥倫比亞懲教所被一名囚犯襲擊致死。
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">傑佛瑞·達默傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>要來我家聽音樂嗎?</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

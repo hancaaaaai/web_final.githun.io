@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影介紹</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('相關影集介紹背景.jpg') no-repeat center center fixed;
+            /* 背景图片 */
+            background-size: cover;
+            /* 背景图片覆盖整个页面 */
+        }
+
+        .movie-card {
+            margin-bottom: 30px;
+            max-width: 800px;
+            /* 设置卡片最大宽度 */
+            width: 100%;
+            /* 使卡片占满可用宽度 */
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .movie-image {
+            height: 450px;
+            /* 增加图片高度 */
+            object-fit: cover;
+        }
+
+        .movie-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            /* 增加标题字体大小 */
+            font-weight: bold;
+            /* 设置标题为粗体 */
+            letter-spacing: 1px;
+            /* 字距 */
+
+        }
+
+        .card-text {
+            font-size: 1.25rem;
+            /* 增加正文字体大小 */
+            font-weight: bold;
+            /* 设置正文为粗体 */
+            letter-spacing: 1px;
+            /* 字距 */
+            line-height: 2;
+            /* 行距 */
+        }
+
+        .card-tex2 {
+            font-size: 1rem;
+            /* 增加正文字体大小 */
+            letter-spacing: 1px;
+            /* 字距 */
+
+
+
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 400px;
+            background: url('左側選單.png') no-repeat center center;
+            /* 菜单背景图片 */
+            background-size: cover;
+            /* 背景图片覆盖整个菜单 */
+            padding-top: 20px;
+            padding-left: 20px;
+
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #000;
+            font-size: 2rem;
+            /* 增加菜单字体大小 */
+            font-weight: bold;
+            /* 设置菜单字体为粗体 */
+
+        }
+
+        .sidebar a:hover {
+
+            color: red;
+            /* 鼠标悬停时将文字颜色设置为红色 */
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.247);
+            border: none;
+            /* 去掉卡片的边框 */
+        }
+
+        .top-right-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            /* 确保按钮在最上层 */
+        }
+
+        .top-right-button img {
+            width: 50px;
+            height: 50px;
+            /* 设置图片大小 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 按鈕 -->
+    <a class="top-right-button" href="index.html"><img src="按鈕.png" alt="返回"></a>
+
+    <div class="sidebar">
+        <P class="card-title">影集介紹</p>
+        <a href="#movie1">《破案神探》</a>
+        <a href="#movie2">《食人魔達默》</a>
+        <a href="#movie3">《恐怖室友全紀錄》</a>
+        <a href="#movie4">《追緝連環殺手》</a>
+        <a href="#movie5">《夢魘殺魔》</a>
+        <a href="#movie6">《死亡天使》</a>
+        <a href="#movie7">《黑鳥》</a>
+        <!-- 可以添加更多的链接 -->
+    </div>
+
+    <div class="content">
+        <div class="container mt-5">
+
+
+            <div class="movie-container">
+                
+                <div id="movie1" class="movie-card">
+                    <div class="card">
+                        <img src="9_破案神探.jpg" class="card-img-top movie-image" alt="Movie 1">
+                        <div class="card-body">
+                            <p class="card-title">《破案神探》
+                            </p>
+                            <p class="card-tex2">導演:大衛·芬奇(David Fincher)</p>
+                            <p class="card-text">
+                                故事講述兩位FBI探員透過自身研究的犯罪心理剖繪，來去調查各個連環兇案，影集內所有訪問的罪犯都是真實存在且訪問紀錄為真實對話，片中有各種暗喻，沒有過多的血腥畫面，更多的是在描寫關於這些罪犯的心理，透過談話來去挖掘更多事實
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie2" class="movie-card">
+                    <div class="card">
+                        <img src="10_食人魔達默.jpg" class="card-img-top movie-image" alt="Movie 2">
+                        <div class="card-body">
+                            <p class="card-title">《食人魔達默》
+                            </p>
+                            <p class="card-tex2">導演:強納森·德米（Evan Peters）
+
+                            </p>
+                            <p class="card-text">
+                                以類紀錄片的方式講述達默的故事，沒有任何血腥的場景，但透過訪問的語氣、細節的描述，就會讓人不寒而顫，此部片也反應出當時美國社會種族歧視的問題，警察沒有真正平等的對待所有族群的犯罪，導致很多事情被忽略，釀成更大的悲劇
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie3" class="movie-card">
+                    <div class="card">
+                        <img src="11_恐怖室友全紀錄.jfif" class="card-img-top movie-image" alt="Movie 3">
+                        <div class="card-body">
+                            <p class="card-title">《恐怖室友全紀錄》
+                            </p>
+                            <p class="card-tex2">導演:布倫屋電視製片公司
+
+                            </p>
+                            <p class="card-text">
+                                劇情圍繞著4件恐怖的案件，平日友善、文靜、看起來無害的室友，卻在背後做著如此黑暗的事情....
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="movie4" class="movie-card">
+                    <div class="card">
+                        <img src="12_追緝連環殺手.jfif" class="card-img-top movie-image" alt="Movie 4">
+                        <div class="card-body">
+                            <p class="card-title">《追緝連環殺手》
+                            </p>
+                            <p class="card-tex2">導演:本·瑞德(Ben Reid)
+                            </p>
+                            <p class="card-text">
+                                總共有6個案件，且在拍攝前都有找當時辦案的警察訪問，片中並沒有很多的討論犯罪動機、前因後果，主要是讓警察親自述說他們追緝凶手的心路歷程
+
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie5" class="movie-card">
+                    <div class="card">
+                        <img src="13_夢魘殺魔.jfif" class="card-img-top movie-image" alt="Movie 5">
+                        <div class="card-body">
+                            <p class="card-title">《夢魘殺魔》
+                            </p>
+                            <p class="card-tex2">導演:約翰達爾(John Dahl)/史蒂夫希爾(Steve Shill)
+
+
+                            </p>
+                            <p class="card-text">
+                                主角是白天在警署的血跡檢測官，晚上則是殺死罪惡之人的連環殺手，因為童年所經歷的恐怖事件，讓他想為社會除害
+
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie6" class="movie-card">
+                    <div class="card">
+                        <img src="14_死亡天使.jfif" class="card-img-top movie-image" alt="Movie 6">
+                        <div class="card-body">
+                            <p class="card-title">《死亡天使》
+                            </p>
+                            <p class="card-tex2">導演:托比亞斯·林道赫姆(Tobias Lindholm)
+                            </p>
+                            <p class="card-text">
+                                改編自真人真事，將美國醫療界的黑歷史搬上了檯面，看似和藹可親、對身邊人都很好的醫護人員，私下居然如此殘忍可怕，影片由一位單親媽媽的角度去看這件事，冒著生命危險的她慢慢的揭開真相
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie7" class="movie-card">
+                    <div class="card">
+                        <img src="15_黑鳥.jpg" class="card-img-top movie-image" alt="Movie 7">
+                        <div class="card-body">
+                            <p class="card-title">《黑鳥》
+                            </p>
+                            <p class="card-tex2">導演:邁克爾·R·羅斯卡姆(Michael R. Roskam)
+                            </p>
+                            <p class="card-text">
+                                改編自改編自詹姆斯·基恩與希勒·萊文合著的犯罪回憶錄《與魔鬼同行：墮落的英雄、連環殺手和危險的救贖交易》，是一部迷你劇，總共有6部，故事主要講述一名毒販進監獄後獲得了一項任務，就是跟獄中的連環殺手當朋友，去問出受害者的下落
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+             
+                <!-- 可以添加更多電影介紹卡片 -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

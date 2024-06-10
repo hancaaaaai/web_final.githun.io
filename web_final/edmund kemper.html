@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_艾德蒙·肯培.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">艾德蒙·肯培（Edmund Kemper）</h5>
+                        <p class="custom-text">出生地：美國加州</p>
+                        <p class="custom-text">出生日期：1948年12月18日</p>
+                        <p class="custom-text">身高：6英尺9英寸（約206厘米）</p>
+                        <p class="custom-text">民族：白人</p>
+                        <p class="custom-text">犯罪活動期間：1964年至1973年</p>
+                        <p class="custom-text">被捕日期：1973年4月24日</p>
+                        <p class="custom-text">判決：8次終身監禁</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            艾德蒙·肯培於1948年12月18日出生於加利福尼亞州。他的父親是一名軍官，母親則是一名生物學教師。然而，他的父母關係緊張，經常爭吵，最終在他9歲時離婚。肯培與母親和姐妹住在一起，但他與母親的關係極為惡劣。母親經常對他進行言語和情感上的虐待，甚至公開羞辱他，將他關進地下室，這在很大程度上影響了他的心理發展。
+                        </p>
+
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            艾德蒙·肯培的犯罪行為始於1964年，當時他只有15歲。在那一年，他殺害了自己的祖父母。這一事件使他被送往加利福尼亞州的一個精神病院接受治療。經過幾年的治療和觀察，肯培在21歲時被認為已康復並獲釋，精神病院的醫師都覺得他是一個健談的正常人且非常有禮貌，醫生甚至將他的經歷全部刪除
+                        </p>
+                        <p class="custom-text">
+                            然而，釋放後，肯培依舊住在母親的房子，也讓他繼續在這樣的陰影下，使得肯培並沒有改變，反而繼續他的犯罪行為。主要在1972年至1973年間，他犯下了多起謀殺案。他的目標主要是年輕女性，他將其引誘上車後將其帶至偏僻地點，然後進行施害。肯培以其巨大的身材和自信的外表蒙騙受害者，使他們感到安全，進而達成其犯罪目的。
+                        </p>
+
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            1973年4月，艾德蒙·肯培在殺害了自己的母親和她的一位朋友後，向警方自首。他在警察面前詳細描述了自己的罪行，並對所有指控供認不諱。肯培被判處終身監禁，無假釋可能。
+                            在監獄中，肯培展現出與普通囚犯不同的行為，他積極參與獄中活動，甚至幫助監獄錄製有聲書，他覺得這是一件很好的行為，可以幫助那些需要的人，他的犯罪歷程和心理狀態成為許多犯罪學者和心理學家研究的對象。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">艾德蒙·肯培傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>嗨，要搭便車嗎?</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_愛德華蓋恩.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">愛德華·蓋恩（Edward Gein）</h5>
+                        <p class="custom-text">出生地：美國威斯康辛州</p>
+                        <p class="custom-text">出生日期：1906年8月27日</p>
+                       
+                        <p class="custom-text">犯罪活動期間：1954年至1957年</p>
+                        <p class="custom-text">被捕日期：1957年11月16日</p>
+                        <p class="custom-text">判決：1次終身監禁</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            愛德華·西奧多·蓋恩（Edward Theodore Gein）於1906年8月27日出生於威斯康辛州拉克羅斯。他的家庭生活充滿困難，他的父親是一名酒鬼，經常失業且對家庭漠不關心。他的母親奧古斯塔·蓋恩（Augusta Gein）是一個極端虔誠且專橫的女人，對孩子實行嚴格的管教，特別是在宗教和道德方面。
+                        </p>
+                        <p class="custom-text">
+                            蓋恩和他的兄弟亨利在母親的影響下過著與世隔絕的生活，奧古斯塔對外界的接觸和社交活動非常排斥。這種孤立的環境和母親的極端控制對蓋恩的心理發展產生了深遠的影響。
+                        </p>
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            愛德華·蓋恩的犯罪行為主要集中在1950年代，他的行為包括盜墓和謀殺。1957年，警方在調查當地一名失蹤女性貝妮絲·沃頓（Bernice Worden）時，發現了蓋恩的罪行。他們在蓋恩的家中找到了沃頓的屍體以及大量來自墓地的屍體部位和其他令人不安的物品。
+                        </p>
+                        <p class="custom-text">
+                            蓋恩承認，他從當地的墓地挖掘屍體，並利用這些屍體部位進行各種用途。這些發現使得蓋恩成為20世紀中最臭名昭著的犯罪者之一。
+                        </p>
+
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            1957年，愛德華·蓋恩被捕並被指控謀殺貝妮絲·沃頓。在隨後的審判中，蓋恩被判定精神錯亂，無法接受審判，因此被送往精神病院進行治療。
+                        </p>
+                        <p class="custom-text">
+                            1984年，蓋恩在威斯康辛州的一家精神病院中去世。他在監禁期間，成為犯罪學和心理學研究的對象，特別是關於精神疾病對犯罪行為的影響。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">愛德華·蓋恩傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>我也想要真正的自由</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

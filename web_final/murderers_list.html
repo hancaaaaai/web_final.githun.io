@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全屏背景圖片</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定義 CSS -->
+    <style>
+        /* 確保背景圖片全屏顯示 */
+        .bg-img {
+            background-image: url('殺人犯名冊_背景圖.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* 使背景圖片充滿整個視窗高度 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            /* 讓內容可以相對於此元素定位 */
+        }
+
+        .photo-grid {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .card {
+            margin: 10px;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .card-text {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            font-family: 'SimSun', '宋体', sans-serif;
+
+        }
+
+
+        .card-text span {
+            display: block;
+            white-space: nowrap;
+        }
+
+        /* 按鈕樣式 */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        /* 右上角按鈕樣式 */
+        .movie-button {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            z-index: 999;
+        }
+
+        /* 樣式自定義圖片 */
+        .back-button img,
+        .movie-button img {
+            width: 50px;
+            /* 調整圖片大小 */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 按鈕 -->
+    <a class="back-button" href="index.html"><img src="按鈕.png" alt="返回"></a>
+
+    <!-- 右上角按鈕 -->
+    <a class="movie-button" href="movie.html"><img src="按鈕2.png" alt="Movie"></a>
+
+    <!-- 背景圖片 -->
+    <div class="bg-img">
+        <div class="container photo-grid">
+            <div class="row">
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="edmund kemper.html">
+                            <img src="殺人者名冊_Edmund Kemper.png" alt="Photo 1">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>艾德蒙·肯培</span>
+                                <span>Edmund Kemper</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="jeffrey dahmer.html">
+                            <img src="殺人者名冊_Jeffrey Dahmer.png" alt="Photo 2">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>傑佛瑞·達默</span>
+                                <span>Jeffrey Dahmer</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="ted bundy.html">
+                            <img src="殺人者名冊_Ted Bundy.png" alt="Photo 3">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>泰德·邦迪</span>
+                                <span>Ted Bundy</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="david berkowitz.html">
+                            <img src="殺人者名冊_David Berkowitz.png" alt="Photo 4">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>大衛·伯科維茨</span>
+                                <span>David Berkowitz</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="william bonin.html">
+                            <img src="殺人者名冊_William Bonin.png" alt="Photo 5">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>威廉·波寧</span>
+                                <span>William Bonin</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="jerry brudos.html">
+                            <img src="殺人者名冊_Jerry Brudos.png" alt="Photo 6">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>傑瑞·布魯多斯</span>
+                                <span>Jerry Brudos</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="john wayne gacy.html">
+                            <img src="殺人者名冊_John Wayne Gacy.png" alt="Photo 7">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>約翰·韋恩·蓋西</span>
+                                <span>John Wayne Gacy</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="edward gein.html">
+                            <img src="殺人者名冊_Edward Gein.png" alt="Photo 8">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>愛德華·蓋恩</span>
+                                <span>Edward Gein</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="belle gunness.html">
+                            <img src="殺人者名冊_Belle Gunness.png" alt="Photo 9">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>貝莉·根納斯</span>
+                                <span>Belle Gunness</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="h_h_holmes.html">
+                            <img src="殺人者名冊_H. H. Holmes.png" alt="Photo 10">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>H·H·福爾摩斯</span>
+                                <span>H. H. Holmes</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="charles cullen.html">
+                            <img src="殺人者名冊_Charles Cullen.png" alt="Photo 11">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>查爾斯·庫倫</span>
+                                <span>Charles Cullen</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="card">
+                        <a href="cat.html">
+                            <img src="殺人者名冊_cats_工作區域 1.png" alt="Photo 11">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span>貓</span>
+                                <span>Cat</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap JS 和依賴的 Popper.js 和 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_福爾摩斯.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">H·H·福爾摩斯（Herman Webster Mudgett）</h5>
+                        <p class="custom-text">出生地：美國紐罕布什爾州</p>
+                        <p class="custom-text">出生日期：1861年5月16日</p>
+                      
+                        <p class="custom-text">犯罪活動期間：1886年至1894年</p>
+       
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            亨利·霍華德·福爾摩斯（Henry Howard Holmes），原名赫爾曼·韋伯斯特·馬傑特（Herman Webster Mudgett），於1861年5月16日出生於新罕布什爾州的吉爾曼頓。他出生在一個普通的農民家庭，有著相對穩定的童年。不過，福爾摩斯從小就顯現出對解剖學和醫學的濃厚興趣，這種興趣後來成為他犯罪行為的一部分。
+                        </p>
+                        <p class="custom-text">
+                            福爾摩斯在密歇根大學醫學院學習期間，開始參與各種詐騙活動，包括從屍體保險金詐騙。這段時期的經歷為他後來的犯罪生涯奠定了基礎。
+                        </p>
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            亨利·霍華德·福爾摩斯於1886年搬到芝加哥，並改名為H.H. Holmes。他在芝加哥建造了一座名為“霍華德城堡”（也被稱為“謀殺城堡”）的旅館。這座建築物結構複雜，有著秘密房間、隱藏的走廊和陷阱門，設計用來進行犯罪活動。
+                        </p>
+                        <p class="custom-text">
+                            在1893年芝加哥哥倫布博覽會期間，福爾摩斯利用這座旅館吸引了許多來自外地的訪客和求職者。他將受害者引誘到旅館，然後對他們進行各種非法行為。
+                        </p>
+                        <p class="custom-text">
+                            福爾摩斯的犯罪活動不僅限於謀殺，他還參與了許多詐騙活動，通過多重身份和複雜的騙局來獲取財富。他的行為最終引起了警方的注意。
+                        </p>
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            1894年，福爾摩斯因涉嫌詐騙被捕，隨後警方在調查中發現了更多的證據，將他與多起謀殺案聯繫起來。福爾摩斯在審訊過程中供認了27起謀殺案，雖然實際的受害者人數可能更多。
+                        </p>
+                        <p class="custom-text">
+                            1895年，他被判處死刑，並於1896年5月7日在費城被絞死。在他死後，關於他的罪行和“謀殺城堡”的故事被廣泛報導，使他成為美國歷史上最臭名昭著的連環殺手之一。
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">亨利·霍華德·福爾摩斯傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>歡迎來到霍華德城堡</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

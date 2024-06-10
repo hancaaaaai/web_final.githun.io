@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_貓.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">小黑（black cat）</h5>
+                        <p class="custom-text">年齡：3歲</p>
+                        <p class="custom-text">性別：母性</p>
+                      
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            小花出生於一個寵物店，後來被一個寵物愛好者領養。這個愛好者是一位名叫小李的女士，她對小花寵愛有加。小花從小就被寵成了一隻機靈活潑的貓咪。
+                        </p>
+
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            小花生活在小李女士的溫馨家庭中，一天，當小李正在忙碌於廚房時，小花趁機溜進了廚房，偷走了小李準備要煮的新鮮魚。小花的好奇心和對美食的渴望讓她忍不住犯了規。
+                        </p>
+                        
+
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            小李發現了廚房裡的混亂和缺少的魚，她立刻懷疑到了小花。經過一番搜索後，她在小花的床下找到了剩下的魚骨頭。憤怒的小李決定將小花送進一個貓咪專用的「貓監獄」，以期教訓她。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">小黑傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>喵喵喵喵(我好餓)</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

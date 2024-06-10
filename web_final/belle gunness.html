@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_貝莉根納斯.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">貝莉·根納斯（Belle Gunness）</h5>
+                        <p class="custom-text">出生地：挪威</p>
+                        <p class="custom-text">出生日期：1859年11月11日</p>
+
+                        <p class="custom-text">犯罪活動期間：1884年至1908年</p>
+                        <p class="custom-text">被捕日期：1973年4月24日</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            貝莉·根納斯（Belle Gunness）於1859年11月11日出生於挪威，原名布莉·波爾斯達特（Brynhild
+                            Paulsdatter）。她在一個貧窮的農民家庭中長大，年輕時期的生活艱苦。她於1881年移民到美國，改名為貝莉·根納斯，並定居在芝加哥。
+                        </p>
+                        <p class="custom-text">
+                            在美國，她嫁給了馬茨·索倫森（Mads Sorenson），並在他的陪伴下開始經營一間糖果店。然而，這對夫婦的生活並不順利，糖果店在幾年後被火災摧毀，之後馬茨也在一個神秘的情況下去世。
+                        </p>
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            貝莉·根納斯被懷疑在1890年代和1900年代初期，通過連環謀殺獲得了大量的財富。她主要是以婚姻和求職廣告吸引受害者到她在印第安納州拉波特的農場。她通常會與這些男性建立關係，然後謀取他們的錢財後將其殺害。
+                        </p>
+                        <p class="custom-text">
+                            貝莉的農場於1908年發生了一場火災，火災後人們在她的房子遺址中發現了多具屍體，包括她的三個孩子。然而，貝莉本人並未被找到，這引發了關於她是否真的在火災中喪生的諸多猜測。
+                        </p>
+                        <p class="custom-text">
+                            警方在對她的農場進行調查時，發現了更多的屍體和證據，證明她在多年內犯下了多起謀殺罪行。根據調查，她可能涉及的謀殺案多達20起甚至更多。
+                        </p>
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            由於貝莉·根納斯在火災後失踪，並且她的屍體從未被確定，警方無法對她進行審判。她的命運成為了一個謎團，許多人相信她可能逃脫了並改變了身份，繼續在別處生活。
+                        </p>
+                        <p class="custom-text">
+                            儘管如此，貝莉·根納斯的故事成為了美國犯罪史上的一個著名案例，並且被廣泛報導和討論。她的案件也激發了許多關於女性連環殺手和謀財害命的犯罪故事。
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">貝莉·根納斯傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>先生，你一個人嗎?</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

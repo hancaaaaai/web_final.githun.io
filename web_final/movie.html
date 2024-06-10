@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影介紹</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('相關電影介紹背景.jpg') no-repeat center center fixed;
+            /* 背景图片 */
+            background-size: cover;
+            /* 背景图片覆盖整个页面 */
+        }
+
+        .movie-card {
+            margin-bottom: 30px;
+            max-width: 800px;
+            /* 设置卡片最大宽度 */
+            width: 100%;
+            /* 使卡片占满可用宽度 */
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .movie-image {
+            height: 450px;
+            /* 增加图片高度 */
+            object-fit: cover;
+        }
+
+        .movie-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            /* 增加标题字体大小 */
+            font-weight: bold;
+            /* 设置标题为粗体 */
+            letter-spacing: 1px;
+            /* 字距 */
+
+        }
+
+        .card-text {
+            font-size: 1.25rem;
+            /* 增加正文字体大小 */
+            font-weight: bold;
+            /* 设置正文为粗体 */
+            letter-spacing: 1px;
+            /* 字距 */
+            line-height: 2;
+            /* 行距 */
+        }
+
+        .card-tex2 {
+            font-size: 1rem;
+            /* 增加正文字体大小 */
+            letter-spacing: 1px;
+            /* 字距 */
+
+
+
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 400px;
+            background: url('左側選單.png') no-repeat center center;
+            /* 菜单背景图片 */
+            background-size: cover;
+            /* 背景图片覆盖整个菜单 */
+            padding-top: 20px;
+            padding-left: 20px;
+
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #000;
+            font-size: 2rem;
+            /* 增加菜单字体大小 */
+            font-weight: bold;
+            /* 设置菜单字体为粗体 */
+
+        }
+
+        .sidebar a:hover {
+
+            color: red;
+            /* 鼠标悬停时将文字颜色设置为红色 */
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.247);
+            border: none;
+            /* 去掉卡片的边框 */
+        }
+
+        .top-right-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            /* 确保按钮在最上层 */
+        }
+
+        .top-right-button img {
+            width: 50px;
+            height: 50px;
+            /* 设置图片大小 */
+        }
+    </style>
+</head>
+
+<body>
+<!-- 按鈕 -->
+<a class="top-right-button" href="series.html"><img src="按鈕2.png" alt="返回"></a>
+
+    <div class="sidebar">
+        <P class="card-title">電影介紹</p>
+        <a href="#movie1">《極惡人魔》</a>
+        <a href="#movie2">《沉默的羔羊》</a>
+        <a href="#movie3">《殺人回憶》</a>
+        <a href="#movie4">《火線追緝令》</a>
+        <a href="#movie5">《追擊者》</a>
+        <a href="#movie6">《索命黃道帶》</a>
+        <a href="#movie7">《致命ID》</a>
+        <a href="#movie8">《智齒》</a>
+        <!-- 可以添加更多的链接 -->
+    </div>
+
+    <div class="content">
+        <div class="container mt-5">
+
+
+            <div class="movie-container">
+
+                <div id="movie1" class="movie-card">
+                    <div class="card">
+                        <img src="1_極惡人魔.jpg" class="card-img-top movie-image" alt="Movie 1">
+                        <div class="card-body">
+                            <p class="card-title">《極惡人魔》
+                            </p>
+                            <p class="card-tex2">導演:喬·柏林傑(Joseph Berlinger)</p>
+                            <p class="card-text">改編自美國70年代著名連續殺人魔泰迪邦迪（Ted
+                                Bundy）的真實故事，電影內沒有任何血腥場景，多半以懸疑為主，故事以泰迪邦迪的女朋友莉茲的角度出發，一個外表英俊、聰明的男友，為甚麼會越變越陌生呢?
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie2" class="movie-card">
+                    <div class="card">
+                        <img src="2_沉默的羔羊.jpeg" class="card-img-top movie-image" alt="Movie 2">
+                        <div class="card-body">
+                            <p class="card-title">《沉默的羔羊》
+                            </p>
+                            <p class="card-tex2">導演:強納森·德米(Jonathan Demme)
+
+                            </p>
+                            <p class="card-text">為了逮捕叫做水牛比爾的罪犯， FBI 實習探員克麗絲史達琳( Clarice
+                                Starling)不得不去監獄訪問一名精神專家漢尼拔，他沉著冷靜、知識淵博，克麗絲也越來越接近兇手....整部影片以雙故事線進行，在觀影過程中會感受到漢尼拔帶給人的壓抑恐懼，此部還有另外三部曲《漢尼拔》《紅龍》《少年漢尼拔》
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie3" class="movie-card">
+                    <div class="card">
+                        <img src="3_殺人回憶.jpg" class="card-img-top movie-image" alt="Movie 3">
+                        <div class="card-body">
+                            <p class="card-title">《殺人回憶》
+                            </p>
+                            <p class="card-tex2">導演:奉俊昊(봉준호)
+
+                            </p>
+                            <p class="card-text">
+                                改編自韓國真實發生過的知名懸案「華城連環殺人案」，故事從一起凶案開始，透過偵探的調查，一步一步引領觀眾回到當時的「記憶」，劇情沒有過多的高潮迭起，而是平淡、紀實的方式來紀錄這個案件
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="movie4" class="movie-card">
+                    <div class="card">
+                        <img src="4_火線追緝令.jpeg" class="card-img-top movie-image" alt="Movie 4">
+                        <div class="card-body">
+                            <p class="card-title">《火線追緝令》
+                            </p>
+                            <p class="card-tex2">導演:大衛·芬奇(David Fincher)
+
+                            </p>
+                            <p class="card-text">
+                                即將退休的警探William與年輕的警探David聯手調查一起關於七宗罪的案件，犯人會去懲罰犯下七宗罪的「無辜」人民，電影內有很多信仰以及思想層面值得我們去深思，也有很多暗諷人性的元素，整體的氛圍以及情緒的疊加做的很好
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie5" class="movie-card">
+                    <div class="card">
+                        <img src="5_追擊者.jpg" class="card-img-top movie-image" alt="Movie 5">
+                        <div class="card-body">
+                            <p class="card-title">《追擊者》
+                            </p>
+                            <p class="card-tex2">導演:羅泓軫(나홍진)
+
+
+                            </p>
+                            <p class="card-text">
+                                改編自真實案件，描述首爾的女郎一個一個的失蹤，皮條客非常頭痛，但經過調查後，這些女孩們最後接客的對象好像都是同一個人....這部片有很多劇烈的追擊畫面，為了完成大量的打鬥戲碼，曾連續30多小時的不斷拍攝，完美的畫面呼應著電影名《追擊者》
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie6" class="movie-card">
+                    <div class="card">
+                        <img src="6_索命黃道帶.png" class="card-img-top movie-image" alt="Movie 6">
+                        <div class="card-body">
+                            <p class="card-title">《索命黃道帶》
+                            </p>
+                            <p class="card-tex2">導演:大衛·芬奇(David Fincher)
+
+
+
+                            </p>
+                            <p class="card-text">
+                                改編自真實案件「黃道帶殺手」，故事圍繞在與案件相關的四個人身上，他們在追尋兇手的過程中愈陷愈深，而兇手不斷的留下密碼、線索，擾亂他們的思緒....
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="movie7" class="movie-card">
+                    <div class="card">
+                        <img src="7_致命ID.jpg" class="card-img-top movie-image" alt="Movie 7">
+                        <div class="card-body">
+                            <p class="card-title">《致命ID》
+                            </p>
+                            <p class="card-tex2">導演:詹姆士·曼格(James Mangold)
+
+
+
+                            </p>
+                            <p class="card-text">
+                                改編自真實案件「黃道帶殺手」，故事圍繞在與案件相關的四個人身上，他們在追尋兇手的過程中愈陷愈深，而兇手不斷的留下密碼、線索，擾亂他們的思緒....
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="movie8" class="movie-card">
+                    <div class="card">
+                        <img src="8_智齒.jpg" class="card-img-top movie-image" alt="Movie 8">
+                        <div class="card-body">
+                            <p class="card-title">《智齒》
+                            </p>
+                            <p class="card-tex2">導演:鄭保瑞
+
+
+
+                            </p>
+                            <p class="card-text">
+                                這部是來自香港的電影，改編自中國作家雷米的犯罪小說《智齒》，全片以黑白呈現，故事描述兩個警察深入調查一樁連環兇案，但愈是深入調查，真相愈是迷離撲朔，案子破不了，反倒引發連串事故.....
+
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 可以添加更多電影介紹卡片 -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

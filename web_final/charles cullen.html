@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_查爾斯·庫倫.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">查爾斯·庫倫（Charles Cullen）</h5>
+                        <p class="custom-text">出生地：美國新澤西州</p>
+                        <p class="custom-text">出生日期：1960年2月22日</p>
+         
+                        <p class="custom-text">犯罪活動期間：1987年至2003年</p>
+                        <p class="custom-text">被捕日期：2003年12月12日</p>
+                        <p class="custom-text">判決：7次終身監禁</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            1960年，庫倫在美國新澤西州的西奧蘭治出生，是家中八個兄弟姊妹的的老么。他曾說過，自己有個悲慘的童年。在他還只是個強媬中的嬰兒時，擔任公車司機的父親便撒手離世；緊接著17歲那年，他的母親與姐姐又在一場車禍中喪命。他在失親環境中長大，從小就常被幾個姊姊和他們的男友欺負，無依無靠的他年紀輕輕就曾有過輕生的念頭：9歲那年，他喝下化學藥劑自殺未遂。
+                        </p>
+
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            查爾斯·庫倫在1987年開始在新澤西州不同醫院工作。很快，他就開始了他的犯罪生涯，通過在工作期間向病人注射致命劑量的藥物來實施謀殺。庫倫使用的藥物包括數種引起心臟停止的藥物，如地西泮（Diazepam）和多巴胺（Dopamine）。
+                        </p>
+                        <p class="custom-text">
+                            庫倫的犯罪行為持續了數年，期間他在不同的醫院工作，其中包括聖彼得大學醫院（St. Peter's University Hospital）、沃倫縣醫療中心（Warren Hospital）和索馬塞特醫院（Somerset Medical Center）等。他一直使用著不同的藉口來掩蓋他的犯罪行為，如病人已經接受了緊急治療或者病人已經處於瀕死狀態
+                        </p>
+                        <p class="custom-text">
+                            查爾斯·庫倫的犯罪行為結束於2003年，當時一名同事發現了他在索馬塞特醫院的可疑行為，他被警方逮捕。在接受訊問後，庫倫承認了他在多家醫院實施的謀殺行為。
+                        </p>
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            查爾斯·庫倫於2003年12月12日被捕，並於次年4月被控謀殺罪。在審判期間，他透露了他在過去數年中實施的數十起謀殺案的細節，最終被判處7次終身監禁，避免了死刑。
+                        </p>
+                        <p class="custom-text">
+                            在入獄後，庫倫成為了美國犯罪史上最臭名昭著的連環殺手之一。他的案件引起了公眾對醫療機構的安全性和監管的關注，促使了一系列改革措施。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">艾德蒙·肯培傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>嗨，要搭便車嗎?</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

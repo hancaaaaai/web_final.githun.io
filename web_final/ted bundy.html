@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 20px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_泰德邦迪.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">泰德·邦迪（Ted Bundy）</h5>
+                        <p class="custom-text">出生地：美國佛羅里達州</p>
+                        <p class="custom-text">出生日期：1946年11月24日</p>
+                        <p class="custom-text">身高：6英尺（約183厘米）</p>
+                       
+                        <p class="custom-text">犯罪活動期間：1974年至1978年</p>
+                        <p class="custom-text">被捕日期：1978年2月15日</p>
+                        <p class="custom-text">判決：2次死刑</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            泰德·邦迪，原名西奧多·羅伯特·考威爾（Theodore Robert Cowell），1946年11月24日出生於佛蒙特州伯靈頓。他的母親埃莉諾·路易斯·考威爾（Eleanor Louise Cowell）在未婚的情況下生下了邦迪，這在當時被認為是社會的禁忌。為了避免羞辱，邦迪最初由外祖父母撫養，他被告知外祖父母是他的父母，而母親是他的姐姐。
+                        </p>
+                        <p class="custom-text">
+                            後來，邦迪與母親搬到華盛頓州，他母親改嫁，邦迪隨繼父姓“邦迪”。在新家庭中，邦迪表現得較為普通，他在學校成績優秀，並展現出優異的社交技巧。
+                        </p>
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            泰德·邦迪的犯罪生涯始於1974年，持續到1978年。他在這段時間內犯下了多起謀殺案，受害者主要是年輕女性。他通常利用自己的魅力和聰明才智，引誘受害者進入他的車輛或其他偏僻地點，然後實施犯罪。邦迪的犯罪行為遍及多個州，包括華盛頓州、猶他州、科羅拉多州和佛羅里達州等。
+                        </p>
+                        <p class="custom-text">
+                            邦迪被描述為極具魅力和說服力，他經常偽裝成受傷或需要幫助的人來吸引受害者的注意。在這些州，他使用不同的偽裝和手段，使得追捕他的過程非常困難。他在此期間至少殺害了30名女性，這些案件震驚了全美國。
+                        </p>
+
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            泰德·邦迪多次被捕和逃脫。1975年，邦迪首次因綁架未遂被捕，並在審判中被定罪。然而，他在1977年成功從科羅拉多州的監獄兩次逃脫。最後一次逃脫後，他逃到了佛羅里達州，並繼續犯下多起謀殺案。1978年，邦迪在佛羅里達州被再次捕獲。
+                        </p>
+                        <p class="custom-text">
+                            1980年，邦迪在佛羅里達州被判處死刑，罪名包括多起謀殺、綁架和性犯罪。邦迪在監獄中多次上訴，但最終沒有成功。1989年1月24日，他在佛羅里達州州立監獄被執行電椅死刑。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">泰德·邦迪傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>我目前在華盛頓大學就讀心理學系</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全屏背景圖片</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定義 CSS -->
+    <style>
+        /* 確保背景圖片全屏顯示 */
+        .bg-img {
+            background-image: url('主頁背景圖.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* 使背景圖片充滿整個視窗高度 */
+        }
+
+        /* 左側長方形 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -40%;
+            width: 40%;
+            height: 100%;
+            background-image: url('左側選單.png');
+            /* 修改为你自己的图片路径 */
+            background-size: cover;
+            background-position: center;
+            transition: left 0.3s;
+        }
+
+        /* 左側長方形內容 */
+        .sidebar-content {
+            padding: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        .sidebar-content a {
+            font-size: 60px;
+            /* 设置文字大小为 20 像素 */
+            font-weight: bold;
+            /* 设置文字加粗 */
+            letter-spacing: 10px;
+            /* 设置文字的字距为 2 像素 */
+            line-height: 3;
+            /* 设置行高为文字大小的 1.5 倍 */
+            color: black;
+            /* 设置文字颜色为黑色 */
+            text-decoration: none;
+            /* 移除文字的下划线效果 */
+            transition: color 0.3s;
+            /* 添加颜色变化的过渡效果 */
+        }
+
+        .sidebar-content a:hover {
+            color: red;
+            /* 鼠标悬停时文字颜色变为红色 */
+        }
+
+        .blur-background {
+            filter: blur(5px);
+            /* 添加模糊效果，5px 是模糊半径，可以根据需要调整 */
+            transition: filter 0.5s ease-in-out;
+            /* 添加过渡效果，使模糊效果渐入渐出 */
+
+        }
+
+        .sidebar-content a {
+            position: relative;
+            /* 让 ::after 伪元素相对于 <a> 元素定位 */
+            text-decoration: none;
+            /* 移除文字的下划线效果 */
+
+        }
+
+        .sidebar-content a::after {
+            content: '';
+            /* 添加内容 */
+            position: absolute;
+            /* 绝对定位 */
+            left: 0;
+            /* 距离左侧边界为 0 */
+            bottom: 40%;
+            /* 距离底部为 0 */
+            width: 100%;
+            /* 宽度为 100% */
+            height: 10px;
+            /* 高度为 2px，即下划线的粗细 */
+            background-color: red;
+            transform-origin: left;
+            /* 指定变换的原点为左侧 */
+            /* 下划线颜色 */
+            transform: scaleX(0);
+            /* 初始时隐藏下划线 */
+            transition: transform 0.3s ease;
+            /* 添加过渡效果 */
+        }
+
+        .sidebar-content a:hover::after {
+            transform: scaleX(1);
+            /* 鼠标悬停时显示下划线 */
+
+        }
+
+        .bg-img {
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .magnifier-img {
+            position: fixed;
+            top: 70%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .modal-dialog {
+            max-width: 49%;
+            /* 調整模態框的最大寬度為視窗寬度的 90% */
+        }
+
+        .modal-content {
+            border: none;
+            /* 移除模態框的邊框 */
+            box-shadow: none;
+            /* 移除模態框的陰影 */
+        }
+
+        #toggleSidebar {
+            position: fixed;
+            /* 将按钮固定在视口上 */
+
+            /* 其他样式 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 背景圖片 -->
+    <div class="bg-img"></div>
+
+    <img src="放大鏡.png" alt="magnifier Image" class="magnifier-img" data-toggle="modal" data-target="#imageModal">
+
+    <!-- 按鈕 -->
+    <img id="toggleSidebar" src="按鈕.png" style="position: fixed; top: 20px; left: 20px; width: 50px; height: 50px;"
+        onclick="toggleSidebar()">
+
+    <!-- 左側長方形 -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <h3>XXXXX</h3>
+            <ul class="list-unstyled sidebar-content">
+                <li id="killers"><a href="#">殺人犯名冊</a></li>
+                <li id="movie"><a href="#">相關電影介紹</a></li>
+                <li id="series"><a href="#">相關影集介紹</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <!-- 模態框 -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="網站簡介.jpg" alt="Large Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap JS 和依賴的 Popper.js 和 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- 自定義 JavaScript -->
+    <!-- 自定義 JavaScript -->
+    <script>
+        // 獲取按鈕和左側長方形的元素
+        var toggleButton = document.getElementById('toggleSidebar');
+        var sidebar = document.getElementById('sidebar');
+        var background = document.querySelector('.bg-img');
+        var magnifier = document.querySelector('.magnifier-img');
+
+
+        // 添加按鈕點擊事件的監聽器
+        toggleButton.addEventListener('click', function (event) {
+            // 防止事件冒泡到 window 上觸發 window 的點擊事件
+            event.stopPropagation();
+
+            // 切換左側長方形的顯示/隱藏
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-40%';
+                // 移除背景元素的模糊效果类
+                background.classList.remove('blur-background');
+                magnifier.style.display = 'none';
+            } else {
+                sidebar.style.left = '0px';
+                // 添加背景元素的模糊效果类
+                background.classList.add('blur-background');
+                magnifier.style.display = 'none';
+            }
+        });
+
+        // 監聽點擊事件，當點擊選單外的地方時，關閉選單
+        window.addEventListener('click', function (event) {
+            if (event.target !== toggleButton && !sidebar.contains(event.target)) {
+                sidebar.style.left = '-40%';
+                // 移除背景元素的模糊效果类
+                background.classList.remove('blur-background');
+                magnifier.style.display = 'block';
+            }
+        });
+
+
+
+        // 监听链接元素的鼠标移入事件
+        killers.addEventListener('mouseenter', function () {
+            // 更改背景图片的URL为其他图片
+            document.querySelector('.bg-img').style.backgroundImage = "url('殺人者名冊目錄圖.jpg')";
+
+        });
+
+        // 监听链接元素的鼠标移出事件
+        killers.addEventListener('mouseleave', function () {
+            // 恢复背景图片为原始图片
+            document.querySelector('.bg-img').style.backgroundImage = "url('主頁背景圖.jpg')";
+        });
+
+        // 监听链接元素的鼠标移入事件
+        movie.addEventListener('mouseenter', function () {
+            // 更改背景图片的URL为其他图片
+            document.querySelector('.bg-img').style.backgroundImage = "url('movie.jpg')";
+
+        });
+
+        // 监听链接元素的鼠标移出事件
+        movie.addEventListener('mouseleave', function () {
+            // 恢复背景图片为原始图片
+            document.querySelector('.bg-img').style.backgroundImage = "url('主頁背景圖.jpg')";
+        });
+
+        // 监听链接元素的鼠标移入事件
+        series.addEventListener('mouseenter', function () {
+            // 更改背景图片的URL为其他图片
+            document.querySelector('.bg-img').style.backgroundImage = "url('series.jpg')";
+
+        });
+
+        // 监听链接元素的鼠标移出事件
+        series.addEventListener('mouseleave', function () {
+            // 恢复背景图片为原始图片
+            document.querySelector('.bg-img').style.backgroundImage = "url('主頁背景圖.jpg')";
+        });
+        // 监听链接元素的点击事件
+        killers.addEventListener('click', function () {
+            // 跳转到 murderers_list.html 页面
+            window.location.href = "murderers_list.html";
+        });
+        // 监听链接元素的点击事件
+        movie.addEventListener('click', function () {
+            // 跳转到 murderers_list.html 页面
+            window.location.href = "movie.html";
+        });
+        // 监听链接元素的点击事件
+        series.addEventListener('click', function () {
+            // 跳转到 murderers_list.html 页面
+            window.location.href = "series.html";
+        });
+    </script>
+</body>
+
+</html>

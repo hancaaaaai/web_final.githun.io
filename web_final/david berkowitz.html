@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介紹</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 新增自定義樣式 */
+        body {
+            background-image: url('人物介紹_背景.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.719);
+            /* 設定 card 的背景顏色和透明度 */
+            margin-top: 80px;
+        }
+
+        #returnButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 40px;
+            /* 设置图像按钮的宽度 */
+            height: 40px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #returnButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        .custom-title {
+            font-weight: bold;
+            font-size: 25px;
+            /* 設定字體大小 */
+            line-height: 1.5;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+        .custom-text {
+            font-weight: bold;
+            font-size: 16px;
+            /* 設定字體大小 */
+            line-height: 2;
+            /* 增加行距 */
+            letter-spacing: 1px;
+            /* 增加字距 */
+        }
+
+
+        /* 按钮样式 */
+        #toastButton {
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            z-index: 999;
+            width: 100px;
+            /* 设置图像按钮的宽度 */
+            height: 100px;
+            /* 设置图像按钮的高度 */
+            background: none;
+            /* 去除背景 */
+            border: none;
+            /* 去除边框 */
+            cursor: pointer;
+            /* 鼠标指针样式 */
+        }
+
+        #toastButton img {
+            width: 100%;
+            /* 图片宽度占满按钮 */
+            height: 100%;
+            /* 图片高度占满按钮 */
+        }
+
+        /* Toast样式 */
+        .toast {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            /* 调整Toast的宽度 */
+            max-width: 100%;
+            /* 防止Toast超出屏幕宽度 */
+        }
+
+        .toast-body {
+            padding: 20px;
+            /* 调整Toast内容的内边距 */
+            font-size: 16px;
+            /* 调整Toast内容的字体大小 */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="murderers_list.html" id="returnButton">
+        <img src="按鈕.png" alt="返回按钮">
+    </a>
+
+    <!-- 介紹框 -->
+    <div class="container col-xl-8">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card">
+                    <img src="介紹_大衛伯科維茲.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="custom-text">大衛·伯科維茨（David Berkowitz）</h5>
+                        <p class="custom-text">出生地：美國紐約市布魯克林區</p>
+                        <p class="custom-text">出生日期：1953年6月1日</p>
+                 
+                        <p class="custom-text">犯罪活動期間：1976年至1977年</p>
+                        <p class="custom-text">被捕日期：1977年8月10日</p>
+                        <p class="custom-text">判決：6次終身監禁</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="custom-title">家庭背景</h5>
+                        <p class="custom-text">
+                            大衛·伯科維茨（出生名：理查德·大衛·法尔科）於1953年6月1日出生於紐約市布魯克林。他的生母是貝蒂·布羅德（Betty Broder），生父則未在他的生活中出現。伯科維茨出生後不久便被保羅和珊姆·伯科維茨夫婦收養，並被重新命名為大衛·伯科維茨。雖然他的養父母給了他一個穩定的家庭環境，但大衛在童年和青少年時期表現出社交困難和行為問題。
+                        </p>
+
+                        <h5 class="custom-title">事件經過</h5>
+                        <p class="custom-text">
+                            大衛·伯科維茨的犯罪行為發生在1976年到1977年間，當時他在紐約市犯下了一系列槍擊事件，被稱為「山姆之子」（Son of Sam）殺手。他的作案目標主要是坐在車內的年輕情侶，他通常使用一把.44口徑的手槍進行襲擊。
+                        </p>
+                        <p class="custom-text">
+                            1976年7月29日，伯科維茨首次犯案，槍擊並殺害了一名年輕女性，重傷另一人。接下來的一年中，他在紐約市不同地區進行了一系列類似的槍擊事件，造成6人死亡，7人受傷。這些案件在當時引發了極大的社會恐慌和媒體關注。
+                        </p>
+                        <p class="custom-text">
+                            伯科維茨在作案期間，曾給警方和媒體寄送信件，自稱「山姆之子」，並在信中描述了他的動機和計劃，增加了恐慌和不安。
+                        </p>
+                        <h5 class="custom-title">被捕入獄</h5>
+                        <p class="custom-text">
+                            1977年8月10日，警方根據一張違規停車罰單追蹤到了大衛·伯科維茨，並在他的車中發現了槍支和相關證據。隨後，伯科維茨在布朗克斯的公寓中被捕。他對所有指控供認不諱，並詳細描述了他的犯罪行為。
+                        </p>
+                        <p class="custom-text">
+                            伯科維茨聲稱，他的犯罪行為是受到了鄰居的狗的指使，這隻狗據說是被一個名叫「山姆」的惡魔附身，命令他去殺人。這一說法使得他的精神狀態成為討論的焦點，但最終，伯科維茨被判定有能力接受審判。
+                        </p>
+                        <p class="custom-text">
+                            1978年，伯科維茨被判處六個連續的25年無假釋監禁，總共相當於365年監禁。他目前仍在監獄中服刑。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    </div>
+    <button type="button" class="btn btn-primary" id="toastButton">
+        <img src="按鈕3.png" alt="Custom Button Image">
+    </button>
+    <!-- Toast -->
+    <div class="toast" id="myToast" style="position: absolute; bottom: 20px; right: 20px;" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">大衛·伯科維茨傳來了訊息</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            <class="mr-3" style="width: 100px;"> <!-- 这里是你想要显示的照片 -->
+                <p>我就是山姆之子</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // 显示Toast
+        $('#toastButton').click(function () {
+            $('.toast').toast('show');
+        });
+
+        // Tab菜单点击事件
+        $('.tab-link').click(function (e) {
+            e.preventDefault();
+            var tabId = $(this).attr('href');
+            $('.tab-pane').removeClass('active');
+            $('.tab-link').removeClass('active');
+            $(tabId).addClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+</html>
